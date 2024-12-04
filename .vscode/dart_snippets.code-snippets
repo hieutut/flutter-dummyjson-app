@@ -1,0 +1,51 @@
+{
+  "BaseModel": {
+    "prefix": "bmodel",
+    "body": [
+      "import 'package:equatable/equatable.dart';",
+      "import 'package:json_annotation/json_annotation.dart';",
+      "",
+      "part '${TM_FILENAME/(.*)\\..+$/$1/}.g.dart';",
+      "",
+      "@JsonSerializable()",
+      "class $1 extends Equatable {",
+      "  const $1();",
+      "",
+      "  factory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);",
+      "  Map<String, dynamic> toJson() => _$$1ToJson(this);",
+      "",
+      "  @override",
+      "  List<Object?> get props => [];",
+      "}",
+      ""
+    ],
+    "description": "BaseModel"
+  },
+  "Screen": {
+    "prefix": "screen",
+    "body": [
+      "import 'package:auto_route/auto_route.dart';",
+      "import 'package:core/core.dart';",
+      "import 'package:flutter/material.dart';",
+      "",
+      "@RoutePage()",
+      "class $1Screen extends StatefulWidget {",
+      "  const $1Screen({super.key});",
+      "",
+      "  static const String routeName = '/$2';",
+      "",
+      "  @override",
+      "  State<$1Screen> createState() => _$1ScreenState();",
+      "}",
+      "",
+      "class _$1ScreenState extends BaseStatefulWidgetState<$1Screen> {",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return const Placeholder();",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Screen"
+  }
+}

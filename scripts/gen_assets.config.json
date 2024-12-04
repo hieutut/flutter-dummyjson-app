@@ -1,0 +1,18 @@
+{
+    "asset_folder": "assets",
+    "output_class_name": "Assets",
+    "output_file_name": "assets",
+    "output_folder": "common/constants",
+    "asset_case_type": "snake",
+    "include_folder_in_asset_name": false,
+    "ignore_file_extensions": [
+        "DS_Store"
+    ],
+    "ignore_asset_folders": [
+        "social_logo",
+        "images/launcher_icon"
+    ],
+    "ignore_asset_files": [
+        "images/img_blank_csc.webp"
+    ]
+}

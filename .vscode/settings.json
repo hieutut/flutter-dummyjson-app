@@ -1,0 +1,40 @@
+{
+  "folderTemplates.structures": [
+    {
+      "name": "Screen",
+      "omitParentDirectory": true,
+      "overwriteExistingFiles": "prompt",
+      "openFilesWhenDone": ["<FTName | snakecase&lowercase>_screen.dart"],
+      "structure": [
+        {
+          "fileName": "<FTName | snakecase&lowercase>_screen.dart",
+          "template": "Screen"
+        }
+      ]
+    }
+  ],
+  "folderTemplates.fileTemplates": {
+    "Screen": [
+      "import 'package:core/core.dart';",
+      "import 'package:flutter/material.dart';",
+      "",
+      "@RoutePage()",
+      "class <FTName | pascalcase>Screen extends StatefulWidget {",
+      "  const <FTName | pascalcase>Screen({super.key});",
+      "",
+      "  static const String routeName = '/<FTName | paramcase>';",
+      "",
+      "  @override",
+      "  State<<FTName | pascalcase>Screen> createState() => _<FTName | pascalcase>ScreenState();",
+      "}",
+      "",
+      "class _<FTName | pascalcase>ScreenState extends BaseStatefulWidgetState<<FTName | pascalcase>Screen> {",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return const Placeholder();",
+      "  }",
+      "}",
+      ""
+    ]
+  }
+}
