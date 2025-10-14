@@ -27,7 +27,7 @@ class ProductItemWidget extends StatelessWidget {
             SizedBox.square(
               dimension: 80,
               child: ColoredBox(
-                color: Colors.blueGrey.withOpacity(0.1),
+                color: Colors.blueGrey.withValues(alpha: 0.1),
                 child: product.thumbnail?.isNotEmpty == true
                     ? CoreImage(
                         product.thumbnail!,
@@ -63,7 +63,7 @@ class ProductItemWidget extends StatelessWidget {
                     height: kIconSize32,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: theme.colorScheme.primary.withOpacity(0.2),
+                      color: theme.colorScheme.primary.withValues(alpha: 0.2),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(
