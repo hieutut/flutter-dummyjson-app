@@ -9,9 +9,10 @@ import 'routes/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Bloc.observer = CubitBaseObserver();
+  // Bloc.observer = CubitBaseObserver();
   Config.setEnv(Environment.PROD);
   await initDependencies();
+  AppRouteObserver.logRouteStack = true;
   runApp(MainApp());
 }
 

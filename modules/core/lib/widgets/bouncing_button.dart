@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class BouncingButton extends StatefulWidget {
   static const Duration DEFAULT_ANIMATION_DURATION = Duration(milliseconds: 200);
-  static const double DEFAULT_SCALE_DOWN_FACTOR = 0.8;
-  static const double DEFAULT_SCALE_UP_FACTOR = 1.2;
+  static const double DEFAULT_SCALE_DOWN_FACTOR = 0.95;
+  static const double DEFAULT_SCALE_UP_FACTOR = 1.1;
 
   const BouncingButton._({
     super.key,

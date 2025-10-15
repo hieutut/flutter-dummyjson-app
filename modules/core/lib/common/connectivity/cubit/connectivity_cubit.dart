@@ -52,7 +52,7 @@ class ConnectivityCubit extends Cubit<ConnectivityState> {
   @override
   void onChange(Change<ConnectivityState> change) {
     super.onChange(change);
-    printOut('', name: '$runtimeType');
+    printOut('${change.currentState.runtimeType} -> ${change.nextState.runtimeType}', name: '$runtimeType');
   }
 
   @override

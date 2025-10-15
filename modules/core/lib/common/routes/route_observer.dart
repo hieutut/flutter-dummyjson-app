@@ -45,8 +45,7 @@ class AppRouteObserver extends AutoRouterObserver {
   }
 
   bool checkRouter(Route<dynamic>? route) {
-    final routeRuntimeType = route.runtimeType.toString();
-    return (route is PageRoute || routeRuntimeType.startsWith('_OpenContainerRoute'));
+    return route is PageRoute;
   }
 
   bool verifyRoutes(Route<dynamic>? currentRoute, Route<dynamic>? previousRoute) {
