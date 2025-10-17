@@ -17,16 +17,16 @@ dependencies:
 
   # BloC
   equatable: ^2.0.5
-  flutter_bloc: ^8.1.6
+  flutter_bloc: ^9.1.1
 
   # DI
   injectable: ^2.5.0
 
   # Routing
-  auto_route: ^9.2.2
+  auto_route: ^10.1.2
 
   # Utils
-  connectivity_plus: ^6.1.0
+  connectivity_plus: ^7.0.0
 
   # UI
   cached_network_image: ^3.4.1
@@ -36,7 +36,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_lints: ^5.0.0
 
   build_runner: ^2.4.11
   injectable_generator: ^2.6.2

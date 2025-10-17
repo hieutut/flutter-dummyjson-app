@@ -17,6 +17,7 @@ class ApiException extends AppException implements DioException {
     this.type = DioExceptionType.unknown,
     StackTrace? stackTrace,
   })  : stackTrace = stackTrace ?? StackTrace.current,
+        stringBuilder = defaultDioExceptionReadableStringBuilder,
         super(code: code ?? ErrorCode.UNKNOWN);
 
   final int? statusCode;
@@ -35,6 +36,9 @@ class ApiException extends AppException implements DioException {
 
   @override
   final DioExceptionType type;
+
+  @override
+  DioExceptionReadableStringBuilder? stringBuilder;
 
   @override
   DioException copyWith({

@@ -96,6 +96,6 @@ class AppRouteObserver extends AutoRouterObserver {
 }
 
 extension RouteExt on Route {
-  String get name => settings.name ?? '';
+  String get name => this is AutoRoute ? (this as AutoRoute).path : (settings.name ?? '');
   Object? get arguments => settings.arguments;
 }

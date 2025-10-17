@@ -1,5 +1,3 @@
-library core;
-
 // Common
 export 'common/connectivity/connectivity.dart';
 export 'common/cubit_base/cubit_base.dart';
