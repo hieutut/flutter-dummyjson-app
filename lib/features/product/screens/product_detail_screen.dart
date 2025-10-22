@@ -6,13 +6,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../common/constants/metric_constants.dart';
 import '../../../common/ui/app_loading.dart';
 import '../../../data/model/product/product.dart';
-import '../../../dependency_injection/di.dart';
 import '../../../styles/app_theme.dart';
 import '../cubit/product_detail/product_detail_cubit.dart';
 import '../widgets/product_images_widget.dart';
 
-@RoutePage()
-class ProductDetailScreen extends StatefulWidget implements AutoRouteWrapper {
+class ProductDetailScreen extends StatefulWidget {
   final Product? product;
   final int? productId;
 
@@ -24,16 +22,14 @@ class ProductDetailScreen extends StatefulWidget implements AutoRouteWrapper {
 
   static const String routeName = '/product-detail';
 
-  @override
-  State<ProductDetailScreen> createState() => _ProductDetailScreenState();
+  static const String pathParam = 'productId';
+
+  static const String routePath = '$routeName/:$pathParam';
+
+  static String routeWithPath(int productId) => routePath.replaceFirst(':$pathParam', '$productId');
 
   @override
-  Widget wrappedRoute(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<ProductDetailCubit>(),
-      child: this,
-    );
-  }
+  State<ProductDetailScreen> createState() => _ProductDetailScreenState();
 }
 
 class _ProductDetailScreenState extends BaseStatefulWidgetState<ProductDetailScreen> {

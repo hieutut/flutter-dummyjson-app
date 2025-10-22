@@ -21,8 +21,6 @@ void main() async {
 class MainApp extends StatelessWidget {
   MainApp({super.key});
 
-  final _appRouter = AppRouter();
-
   List<BlocProvider> get providers {
     return [
       BlocProvider<ConnectivityCubit>(
@@ -53,20 +51,7 @@ class MainApp extends StatelessWidget {
                 child: child!,
               );
             },
-            // routerDelegate: _appRouter.delegate(
-            //   navigatorObservers: () => [
-            //     AppRouteObserver.instance,
-            //     AutoRouteObserver(),
-            //   ],
-            // ),
-            routerConfig: _appRouter.config(
-              navigatorObservers: () => [
-                AppRouteObserver.instance,
-                AutoRouteObserver(),
-              ],
-            ),
-            // onGenerateRoute: Routes.generateRoute,
-            // initialRoute: SplashScreen.routeName,
+            routerConfig: AppRouter.config,
           );
         },
       ),

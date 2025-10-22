@@ -1,10 +1,11 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../common/constants/metric_constants.dart';
 import '../../../data/model/product/product.dart';
-import '../../../routes/app_router.dart';
 import '../../../styles/app_theme.dart';
+import '../screens/product_detail_screen.dart';
 
 class ProductItemWidget extends StatelessWidget {
   const ProductItemWidget({
@@ -18,7 +19,7 @@ class ProductItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BouncingButton.scaleDown(
       onTap: () {
-        context.router.push(ProductDetailRoute(productId: product.id));
+        context.push(ProductDetailScreen.routeWithPath(product.id));
       },
       child: Padding(
         padding: kPadding16All,

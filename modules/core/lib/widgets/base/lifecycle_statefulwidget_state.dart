@@ -1,12 +1,9 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import 'state_common_mixin.dart';
 
-export 'package:auto_route/auto_route.dart';
-
 abstract class LifecycleStatefulWidgetState<T extends StatefulWidget> extends State<T>
-    with WidgetsBindingObserver, AutoRouteAwareStateMixin<T>, StateCommonMixin<T> {
+    with WidgetsBindingObserver, RouteAware, StateCommonMixin<T> {
   @mustCallSuper
   @override
   void initState() {

@@ -2,30 +2,21 @@ import 'package:core/core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../common/constants/metric_constants.dart';
-import '../../../dependency_injection/di.dart';
-import '../../../routes/app_router.dart';
+import '../../cart/screens/cart_screen.dart';
 import '../cubit/product_list/product_list_cubit.dart';
 import '../widgets/product_item_widget.dart';
 import '../widgets/product_list_drawer.dart';
 
-@RoutePage()
-class ProductListScreen extends StatefulWidget implements AutoRouteWrapper {
+class ProductListScreen extends StatefulWidget {
   const ProductListScreen({super.key});
 
   static const String routeName = '/product-list';
 
   @override
   State<ProductListScreen> createState() => _ProductListScreenState();
-
-  @override
-  Widget wrappedRoute(BuildContext context) {
-    return BlocProvider<ProductListCubit>(
-      create: (context) => getIt<ProductListCubit>(),
-      child: this,
-    );
-  }
 }
 
 class _ProductListScreenState extends BaseStatefulWidgetState<ProductListScreen> {
@@ -53,7 +44,7 @@ class _ProductListScreenState extends BaseStatefulWidgetState<ProductListScreen>
         actions: [
           IconButton(
             onPressed: () {
-              router.push(const CartRoute());
+              context.push(CartScreen.routeName);
             },
             icon: const Icon(
               Icons.shopping_cart_outlined,

@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import '../logging/logging.dart';
 
@@ -9,7 +8,7 @@ class _AppRouteObserverConstants {
   );
 }
 
-class AppRouteObserver extends AutoRouterObserver {
+class AppRouteObserver extends NavigatorObserver {
   final List<Route<dynamic>> _routeStack = [_AppRouteObserverConstants.blankRoute];
   List<Route<dynamic>> get routeStack => _routeStack;
 
@@ -35,12 +34,12 @@ class AppRouteObserver extends AutoRouterObserver {
   void _trackRoute(Route<dynamic>? currentRoute, Route<dynamic>? previousRoute, {required String direct}) {
     _currentRoute = currentRoute!;
     _lastRoute = previousRoute!;
-    printOut('$direct ${_lastRoute.data?.path} -> ${_currentRoute.data?.path}', name: 'AppRouteObserver');
+    printOut('$direct ${_lastRoute.name} -> ${_currentRoute.name}', name: 'AppRouteObserver');
   }
 
   void _logRouteStack(String navigate) {
     if (!logRouteStack) return;
-    final stack = routeStack.map((e) => e.data?.path).toList();
+    final stack = routeStack.map((e) => e.name).toList();
     printOut('stack on $navigate: $stack', name: 'AppRouteObserver');
   }
 

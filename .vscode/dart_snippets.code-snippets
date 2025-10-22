@@ -24,11 +24,9 @@
   "Screen": {
     "prefix": "screen",
     "body": [
-      "import 'package:auto_route/auto_route.dart';",
       "import 'package:core/core.dart';",
       "import 'package:flutter/material.dart';",
       "",
-      "@RoutePage()",
       "class $1Screen extends StatefulWidget {",
       "  const $1Screen({super.key});",
       "",

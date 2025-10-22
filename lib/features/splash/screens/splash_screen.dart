@@ -1,9 +1,9 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../../routes/app_router.dart';
+import '../../product/screens/product_list_screen.dart';
 
-@RoutePage()
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -21,10 +21,7 @@ class _SplashScreenState extends BaseStatefulWidgetState<SplashScreen> {
       500.milliseconds,
       () {
         if (!mounted) return;
-        router.pushAndPopUntil(
-          const ProductListRoute(),
-          predicate: (route) => false,
-        );
+        context.goNamed(ProductListScreen.routeName);
       },
     );
   }

@@ -22,9 +22,6 @@ dependencies:
   # DI
   injectable: ^2.5.0
 
-  # Routing
-  auto_route: ^10.1.2
-
   # Utils
   connectivity_plus: ^7.0.0
 
