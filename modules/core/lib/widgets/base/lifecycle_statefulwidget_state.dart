@@ -1,15 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../../common/routes/routes.dart';
+import 'state_common_mixin.dart';
 
 export 'package:auto_route/auto_route.dart';
 
 abstract class LifecycleStatefulWidgetState<T extends StatefulWidget> extends State<T>
-    with WidgetsBindingObserver, AutoRouteAwareStateMixin<T> {
-  AppRouteObserver get routeObserver => AppRouteObserver.instance;
-  StackRouter get router => context.router;
-
+    with WidgetsBindingObserver, AutoRouteAwareStateMixin<T>, StateCommonMixin<T> {
   @mustCallSuper
   @override
   void initState() {

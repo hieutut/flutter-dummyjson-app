@@ -35,12 +35,12 @@ class AppRouteObserver extends AutoRouterObserver {
   void _trackRoute(Route<dynamic>? currentRoute, Route<dynamic>? previousRoute, {required String direct}) {
     _currentRoute = currentRoute!;
     _lastRoute = previousRoute!;
-    printOut('$direct ${_lastRoute.name} -> ${_currentRoute.name}', name: 'AppRouteObserver');
+    printOut('$direct ${_lastRoute.data?.path} -> ${_currentRoute.data?.path}', name: 'AppRouteObserver');
   }
 
   void _logRouteStack(String navigate) {
     if (!logRouteStack) return;
-    final stack = routeStack.map((e) => e.name).toList();
+    final stack = routeStack.map((e) => e.data?.path).toList();
     printOut('stack on $navigate: $stack', name: 'AppRouteObserver');
   }
 
@@ -96,6 +96,6 @@ class AppRouteObserver extends AutoRouterObserver {
 }
 
 extension RouteExt on Route {
-  String get name => this is AutoRoute ? (this as AutoRoute).path : (settings.name ?? '');
+  String get name => settings.name ?? '';
   Object? get arguments => settings.arguments;
 }

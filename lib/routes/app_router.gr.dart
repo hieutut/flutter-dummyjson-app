@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -24,10 +25,7 @@ import 'package:flutter_dummyjson_app/features/splash/screens/splash_screen.dart
 /// [_i1.CartScreen]
 class CartRoute extends _i5.PageRouteInfo<void> {
   const CartRoute({List<_i5.PageRouteInfo>? children})
-      : super(
-          CartRoute.name,
-          initialChildren: children,
-        );
+      : super(CartRoute.name, initialChildren: children);
 
   static const String name = 'CartRoute';
 
@@ -63,23 +61,21 @@ class ProductDetailRoute extends _i5.PageRouteInfo<ProductDetailRouteArgs> {
     name,
     builder: (data) {
       final args = data.argsAs<ProductDetailRouteArgs>(
-          orElse: () => const ProductDetailRouteArgs());
+        orElse: () => const ProductDetailRouteArgs(),
+      );
       return _i5.WrappedRoute(
-          child: _i2.ProductDetailScreen(
-        key: args.key,
-        product: args.product,
-        productId: args.productId,
-      ));
+        child: _i2.ProductDetailScreen(
+          key: args.key,
+          product: args.product,
+          productId: args.productId,
+        ),
+      );
     },
   );
 }
 
 class ProductDetailRouteArgs {
-  const ProductDetailRouteArgs({
-    this.key,
-    this.product,
-    this.productId,
-  });
+  const ProductDetailRouteArgs({this.key, this.product, this.productId});
 
   final _i6.Key? key;
 
@@ -91,16 +87,25 @@ class ProductDetailRouteArgs {
   String toString() {
     return 'ProductDetailRouteArgs{key: $key, product: $product, productId: $productId}';
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! ProductDetailRouteArgs) return false;
+    return key == other.key &&
+        product == other.product &&
+        productId == other.productId;
+  }
+
+  @override
+  int get hashCode => key.hashCode ^ product.hashCode ^ productId.hashCode;
 }
 
 /// generated route for
 /// [_i3.ProductListScreen]
 class ProductListRoute extends _i5.PageRouteInfo<void> {
   const ProductListRoute({List<_i5.PageRouteInfo>? children})
-      : super(
-          ProductListRoute.name,
-          initialChildren: children,
-        );
+      : super(ProductListRoute.name, initialChildren: children);
 
   static const String name = 'ProductListRoute';
 
@@ -116,10 +121,7 @@ class ProductListRoute extends _i5.PageRouteInfo<void> {
 /// [_i4.SplashScreen]
 class SplashRoute extends _i5.PageRouteInfo<void> {
   const SplashRoute({List<_i5.PageRouteInfo>? children})
-      : super(
-          SplashRoute.name,
-          initialChildren: children,
-        );
+      : super(SplashRoute.name, initialChildren: children);
 
   static const String name = 'SplashRoute';
 

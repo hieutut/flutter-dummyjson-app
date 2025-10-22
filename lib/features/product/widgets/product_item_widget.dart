@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../common/constants/metric_constants.dart';
 import '../../../data/model/product/product.dart';
 import '../../../routes/app_router.dart';
+import '../../../styles/app_theme.dart';
 
 class ProductItemWidget extends StatelessWidget {
   const ProductItemWidget({
@@ -15,7 +16,6 @@ class ProductItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return BouncingButton.scaleDown(
       onTap: () {
         context.router.push(ProductDetailRoute(productId: product.id));
@@ -42,7 +42,7 @@ class ProductItemWidget extends StatelessWidget {
                 product.title,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.titleMedium,
+                style: context.text.headline,
               ),
             ),
             kBoxSpaceItem,
@@ -53,7 +53,7 @@ class ProductItemWidget extends StatelessWidget {
               children: [
                 Text(
                   '\$${product.discountPriceString}',
-                  style: theme.textTheme.titleSmall,
+                  style: context.text.subhead.medium,
                 ),
                 kBoxSpaceItem,
                 BouncingButton.scaleUp(
@@ -63,7 +63,7 @@ class ProductItemWidget extends StatelessWidget {
                     height: kIconSize32,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: theme.colorScheme.primary.withValues(alpha: 0.2),
+                      color: context.colors.primary.setOpacity(0.2),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(

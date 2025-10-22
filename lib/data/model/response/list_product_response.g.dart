@@ -16,19 +16,11 @@ ListProductResponse _$ListProductResponseFromJson(Map<String, dynamic> json) =>
       limit: (json['limit'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$ListProductResponseToJson(ListProductResponse instance) {
-  final val = <String, dynamic>{
-    'products': instance.products.map((e) => e.toJson()).toList(),
-    'total': instance.total,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('skip', instance.skip);
-  writeNotNull('limit', instance.limit);
-  return val;
-}
+Map<String, dynamic> _$ListProductResponseToJson(
+        ListProductResponse instance) =>
+    <String, dynamic>{
+      'products': instance.products.map((e) => e.toJson()).toList(),
+      'total': instance.total,
+      if (instance.skip case final value?) 'skip': value,
+      if (instance.limit case final value?) 'limit': value,
+    };

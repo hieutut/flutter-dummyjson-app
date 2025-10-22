@@ -8,6 +8,7 @@ import '../../../dependency_injection/di.dart';
 import '../../../routes/app_router.dart';
 import '../cubit/product_list/product_list_cubit.dart';
 import '../widgets/product_item_widget.dart';
+import '../widgets/product_list_drawer.dart';
 
 @RoutePage()
 class ProductListScreen extends StatefulWidget implements AutoRouteWrapper {
@@ -29,6 +30,7 @@ class ProductListScreen extends StatefulWidget implements AutoRouteWrapper {
 
 class _ProductListScreenState extends BaseStatefulWidgetState<ProductListScreen> {
   late final ProductListCubit productListCubit = context.read();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void onViewCreated() {
@@ -39,8 +41,15 @@ class _ProductListScreenState extends BaseStatefulWidgetState<ProductListScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: const Text('Product List'),
+        leading: IconButton(
+          onPressed: () {
+            _scaffoldKey.currentState?.openDrawer();
+          },
+          icon: Icon(Icons.menu_rounded),
+        ),
         actions: [
           IconButton(
             onPressed: () {
@@ -54,6 +63,7 @@ class _ProductListScreenState extends BaseStatefulWidgetState<ProductListScreen>
           kBoxSpace8,
         ],
       ),
+      drawer: const ProductListDrawer(),
       body: Center(
         child: BlocBuilder<ProductListCubit, ProductListState>(
           buildWhen: (previous, current) {

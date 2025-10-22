@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -20,6 +21,7 @@ import '../features/product/cubit/product_detail/product_detail_cubit.dart'
     as _i370;
 import '../features/product/cubit/product_list/product_list_cubit.dart'
     as _i1002;
+import '../features/settings/theme/cubit/theme_cubit.dart' as _i570;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -35,6 +37,7 @@ extension GetItInjectableX on _i174.GetIt {
     await _i596.CorePackageModule().init(gh);
     gh.factory<_i489.Api>(() => _i489.Api.create());
     gh.factory<_i1013.ProductClient>(() => _i1013.ProductClient.create());
+    gh.singleton<_i570.ThemeCubit>(() => _i570.ThemeCubit());
     gh.factory<_i747.ProductRepository>(
         () => _i839.ProductRepositoryImpl(client: gh<_i1013.ProductClient>()));
     gh.factory<_i1002.ProductListCubit>(() =>

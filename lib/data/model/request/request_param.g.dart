@@ -14,23 +14,14 @@ RequestParam _$RequestParamFromJson(Map<String, dynamic> json) => RequestParam(
       query: json['q'] as String?,
     );
 
-Map<String, dynamic> _$RequestParamToJson(RequestParam instance) {
-  final val = <String, dynamic>{
-    'skip': instance.skip,
-    'limit': instance.limit,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sortBy', instance.sortBy);
-  writeNotNull('order', _$SortOrderEnumMap[instance.order]);
-  writeNotNull('q', instance.query);
-  return val;
-}
+Map<String, dynamic> _$RequestParamToJson(RequestParam instance) =>
+    <String, dynamic>{
+      'skip': instance.skip,
+      'limit': instance.limit,
+      if (instance.sortBy case final value?) 'sortBy': value,
+      if (_$SortOrderEnumMap[instance.order] case final value?) 'order': value,
+      if (instance.query case final value?) 'q': value,
+    };
 
 const _$SortOrderEnumMap = {
   SortOrder.asc: 'asc',

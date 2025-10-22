@@ -7,6 +7,7 @@ import '../../../common/constants/metric_constants.dart';
 import '../../../common/ui/app_loading.dart';
 import '../../../data/model/product/product.dart';
 import '../../../dependency_injection/di.dart';
+import '../../../styles/app_theme.dart';
 import '../cubit/product_detail/product_detail_cubit.dart';
 import '../widgets/product_images_widget.dart';
 
@@ -52,7 +53,6 @@ class _ProductDetailScreenState extends BaseStatefulWidgetState<ProductDetailScr
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(),
       body: BlocBuilder<ProductDetailCubit, ProductDetailState>(
@@ -83,7 +83,7 @@ class _ProductDetailScreenState extends BaseStatefulWidgetState<ProductDetailScr
                         children: [
                           Text(
                             product.title,
-                            style: theme.textTheme.titleLarge,
+                            style: context.text.title3.medium,
                           ),
                           kBoxSpaceItem,
                           Row(
@@ -91,12 +91,12 @@ class _ProductDetailScreenState extends BaseStatefulWidgetState<ProductDetailScr
                             children: [
                               Text(
                                 'Stock: ${product.stock}',
-                                style: theme.textTheme.titleSmall,
+                                style: context.text.callout.medium,
                               ),
                               Text.rich(
                                 TextSpan(
                                   text: '\$${product.discountPriceString}',
-                                  style: theme.textTheme.titleMedium?.copyWith(
+                                  style: context.text.callout.copyWith(
                                     color: Colors.redAccent.shade700,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -105,7 +105,7 @@ class _ProductDetailScreenState extends BaseStatefulWidgetState<ProductDetailScr
                                       const TextSpan(text: ' '),
                                       TextSpan(
                                         text: '\$${product.price}',
-                                        style: theme.textTheme.bodySmall?.copyWith(
+                                        style: context.text.footnote.copyWith(
                                           color: Colors.grey,
                                           decoration: TextDecoration.lineThrough,
                                         ),
@@ -119,7 +119,7 @@ class _ProductDetailScreenState extends BaseStatefulWidgetState<ProductDetailScr
                           kBoxSpaceItem,
                           Text(
                             product.description,
-                            style: theme.textTheme.bodyMedium,
+                            style: context.text.callout,
                           ),
                         ],
                       ),

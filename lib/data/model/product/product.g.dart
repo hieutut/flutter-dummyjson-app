@@ -46,37 +46,30 @@ Product _$ProductFromJson(Map<String, dynamic> json) => Product(
       thumbnail: json['thumbnail'] as String?,
     );
 
-Map<String, dynamic> _$ProductToJson(Product instance) {
-  final val = <String, dynamic>{
-    'id': instance.id,
-    'title': instance.title,
-    'description': instance.description,
-    'category': instance.category,
-    'price': instance.price,
-    'discountPercentage': instance.discountPercentage,
-    'rating': instance.rating,
-    'stock': instance.stock,
-    'tags': instance.tags,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('brand', instance.brand);
-  val['sku'] = instance.sku;
-  val['weight'] = instance.weight;
-  writeNotNull('dimensions', instance.dimensions?.toJson());
-  writeNotNull('warrantyInformation', instance.warrantyInformation);
-  writeNotNull('shippingInformation', instance.shippingInformation);
-  writeNotNull('availabilityStatus', instance.availabilityStatus);
-  val['reviews'] = instance.reviews.map((e) => e.toJson()).toList();
-  writeNotNull('returnPolicy', instance.returnPolicy);
-  val['minimumOrderQuantity'] = instance.minimumOrderQuantity;
-  writeNotNull('meta', instance.meta?.toJson());
-  val['images'] = instance.images;
-  writeNotNull('thumbnail', instance.thumbnail);
-  return val;
-}
+Map<String, dynamic> _$ProductToJson(Product instance) => <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'description': instance.description,
+      'category': instance.category,
+      'price': instance.price,
+      'discountPercentage': instance.discountPercentage,
+      'rating': instance.rating,
+      'stock': instance.stock,
+      'tags': instance.tags,
+      if (instance.brand case final value?) 'brand': value,
+      'sku': instance.sku,
+      'weight': instance.weight,
+      if (instance.dimensions?.toJson() case final value?) 'dimensions': value,
+      if (instance.warrantyInformation case final value?)
+        'warrantyInformation': value,
+      if (instance.shippingInformation case final value?)
+        'shippingInformation': value,
+      if (instance.availabilityStatus case final value?)
+        'availabilityStatus': value,
+      'reviews': instance.reviews.map((e) => e.toJson()).toList(),
+      if (instance.returnPolicy case final value?) 'returnPolicy': value,
+      'minimumOrderQuantity': instance.minimumOrderQuantity,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      'images': instance.images,
+      if (instance.thumbnail case final value?) 'thumbnail': value,
+    };

@@ -13,19 +13,10 @@ ProductMeta _$ProductMetaFromJson(Map<String, dynamic> json) => ProductMeta(
       qrCode: json['qrCode'] as String?,
     );
 
-Map<String, dynamic> _$ProductMetaToJson(ProductMeta instance) {
-  final val = <String, dynamic>{
-    'createdAt': instance.createdAt.toIso8601String(),
-    'updatedAt': instance.updatedAt.toIso8601String(),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('barcode', instance.barcode);
-  writeNotNull('qrCode', instance.qrCode);
-  return val;
-}
+Map<String, dynamic> _$ProductMetaToJson(ProductMeta instance) =>
+    <String, dynamic>{
+      'createdAt': instance.createdAt.toIso8601String(),
+      'updatedAt': instance.updatedAt.toIso8601String(),
+      if (instance.barcode case final value?) 'barcode': value,
+      if (instance.qrCode case final value?) 'qrCode': value,
+    };

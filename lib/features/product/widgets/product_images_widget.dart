@@ -2,6 +2,7 @@ import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common/constants/metric_constants.dart';
+import '../../../styles/app_theme.dart';
 
 class ProductImagesWidget extends StatefulWidget {
   const ProductImagesWidget({
@@ -89,7 +90,7 @@ class _ProductImagesWidgetState extends State<ProductImagesWidget> {
                 child: DecoratedBox(
                   position: DecorationPosition.foreground,
                   decoration: BoxDecoration(
-                    color: isSelected ? null : Colors.white.withValues(alpha: 0.4),
+                    color: isSelected ? null : Colors.white.setOpacity(0.4),
                     borderRadius: kBorderRadius12,
                     border: Border.all(
                       width: isSelected ? 1.5 : 1,
