@@ -33,13 +33,10 @@ extension ThemeModeExt on ThemeMode {
   bool get isLight => this == ThemeMode.light;
 
   String get title {
-    switch (this) {
-      case ThemeMode.system:
-        return 'System';
-      case ThemeMode.light:
-        return 'Light mode';
-      case ThemeMode.dark:
-        return 'Dark mode';
-    }
+    return switch (this) {
+      ThemeMode.system => L.stock,
+      ThemeMode.light => L.light_mode,
+      ThemeMode.dark => L.dark_mode,
+    };
   }
 }

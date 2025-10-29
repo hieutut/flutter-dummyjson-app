@@ -23,7 +23,7 @@ dependencies:
   injectable: ^2.5.0
 
   # Utils
-  connectivity_plus: ^7.0.0
+  connectivity_plus: ^6.0.3
 
   # UI
   cached_network_image: ^3.4.1

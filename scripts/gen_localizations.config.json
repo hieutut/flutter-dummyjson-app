@@ -1,0 +1,7 @@
+{
+    "source_file": "https://docs.google.com/spreadsheets/d/16aMDL3nTN6uoT_2_Bvm7whcyuhj-U8bFO4bNxF2Q8CE/edit?usp=sharing",
+    "input_file": "assets/localizations/dummyjson_app_localization.csv",
+    "output_class_name": "L",
+    "output_file_name": "localization",
+    "output_folder": "common/localization"
+}

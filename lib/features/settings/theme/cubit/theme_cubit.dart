@@ -3,6 +3,8 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
+import '../../../../common/localization/localization.gen.dart';
+
 part 'theme_state.dart';
 
 @Singleton()

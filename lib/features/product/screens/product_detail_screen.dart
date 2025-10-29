@@ -1,9 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:core/core.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../common/constants/metric_constants.dart';
+import '../../../common/localization/localization.gen.dart';
 import '../../../common/ui/app_loading.dart';
 import '../../../data/model/product/product.dart';
 import '../../../styles/app_theme.dart';
@@ -86,7 +88,7 @@ class _ProductDetailScreenState extends BaseStatefulWidgetState<ProductDetailScr
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Stock: ${product.stock}',
+                                '${context.tr(L.stock)}: ${product.stock}',
                                 style: context.text.callout.medium,
                               ),
                               Text.rich(

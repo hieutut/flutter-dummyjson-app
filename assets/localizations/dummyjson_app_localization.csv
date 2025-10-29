@@ -1,0 +1,20 @@
+key,en_US,vi_VN,fr_FR,de_DE,ja_JP,ko_KR,zh_CN,zh_HK,ar,es_ES,ru,he
+en_US,English,English,English,English,English,English,English,English,English,English,English,English
+vi_VN,Tiếng Việt,Tiếng Việt,Tiếng Việt,Tiếng Việt,Tiếng Việt,Tiếng Việt,Tiếng Việt,Tiếng Việt,Tiếng Việt,Tiếng Việt,Tiếng Việt,Tiếng Việt
+fr_FR,Français,Français,Français,Français,Français,Français,Français,Français,Français,Français,Français,Français
+de_DE,Deutsch,Deutsch,Deutsch,Deutsch,Deutsch,Deutsch,Deutsch,Deutsch,Deutsch,Deutsch,Deutsch,Deutsch
+ja_JP,日本語,日本語,日本語,日本語,日本語,日本語,日本語,日本語,日本語,日本語,日本語,日本語
+ko_KR,한국어,한국어,한국어,한국어,한국어,한국어,한국어,한국어,한국어,한국어,한국어,한국어
+zh_CN,简体中文,简体中文,简体中文,简体中文,简体中文,简体中文,简体中文,简体中文,简体中文,简体中文,简体中文,简体中文
+zh_HK,繁體中文,繁體中文,繁體中文,繁體中文,繁體中文,繁體中文,繁體中文,繁體中文,繁體中文,繁體中文,繁體中文,繁體中文
+ar,العربية,العربية,العربية,العربية,العربية,العربية,العربية,العربية,العربية,العربية,العربية,العربية
+es_ES,Español,Español,Español,Español,Español,Español,Español,Español,Español,Español,Español,Español
+ru,Русский,Русский,Русский,Русский,Русский,Русский,Русский,Русский,Русский,Русский,Русский,Русский
+he,עברית,עברית,עברית,עברית,עברית,עברית,עברית,עברית,עברית,עברית,עברית,עברית
+product_list,Product List,Danh sách sản phẩm,Liste des produits,Produktliste,製品リスト,제품 목록,产品列表,產品列表,قائمة المنتجات,Lista de productos,Список продуктов,רשימת מוצרים
+cart,Cart,Giỏ hàng,Panier,Warenkorb,カート,카트,大车,大車,عربة التسوق,Carro,Корзина,עֲגָלָה
+system,System,Hệ thống,Système,System,システム,체계,系统,系統,نظام,Sistema,Система,מַעֲרֶכֶת
+light_mode,Light mode,Chế độ sáng,Mode lumière,Lichtmodus,ライトモード,라이트 모드,浅色模式,淺色模式,وضع الإضاءة,Modo claro,Световой режим,מצב אור
+dark_mode,Dark mode,Chế độ tối,Mode sombre,Dunkler Modus,ダークモード,다크 모드,黑暗模式,黑暗模式,الوضع المظلم,Modo oscuro,Темный режим,מצב כהה
+stock,Stock,Còn hàng,Action,Aktie,ストック,재고,库存,庫存,مخزون,Existencias,Запас,מְנָיוֹת
+language,Language,Ngôn ngữ,Langue,Sprache,言語,언어,语言,語言,لغة,Idioma,Язык,שָׂפָה
