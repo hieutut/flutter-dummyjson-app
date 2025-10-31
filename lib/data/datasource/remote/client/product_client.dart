@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/retrofit.dart';
 
+import '../../../../common/dependency_injection/di.dart';
 import '../../../../common/networking/networking.dart';
-import '../../../../dependency_injection/di.dart';
 import '../../../model/product/product.dart';
 import '../../../model/request/request_param.dart';
 import '../../../model/response/list_product_response.dart';

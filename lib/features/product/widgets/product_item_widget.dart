@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../common/constants/metric_constants.dart';
+import '../../../common/ui/styles/app_theme.dart';
 import '../../../data/model/product/product.dart';
-import '../../../styles/app_theme.dart';
 import '../screens/product_detail_screen.dart';
 
 class ProductItemWidget extends StatelessWidget {

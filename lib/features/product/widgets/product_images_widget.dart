@@ -2,7 +2,7 @@ import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common/constants/metric_constants.dart';
-import '../../../styles/app_theme.dart';
+import '../../../common/ui/styles/app_theme.dart';
 
 class ProductImagesWidget extends StatefulWidget {
   const ProductImagesWidget({

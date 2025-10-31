@@ -7,7 +7,7 @@ import 'app.dart';
 import 'common/config/config.dart';
 import 'common/config/environment.dart';
 import 'common/constants/assets.gen.dart';
-import 'dependency_injection/di.dart';
+import 'common/dependency_injection/di.dart';
 import 'features/settings/language/app_language.dart';
 
 void main() async {

@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../common/constants/metric_constants.dart';
 import '../../../common/localization/localization.gen.dart';
-import '../../../styles/app_theme.dart';
+import '../../../common/ui/styles/app_theme.dart';
 import '../language/app_language.dart';
 import '../theme/cubit/theme_cubit.dart';
 

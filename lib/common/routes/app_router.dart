@@ -2,14 +2,14 @@ import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../data/model/product/product.dart';
+import '../../data/model/product/product.dart';
+import '../../features/cart/screens/cart_screen.dart';
+import '../../features/product/cubit/product_detail/product_detail_cubit.dart';
+import '../../features/product/cubit/product_list/product_list_cubit.dart';
+import '../../features/product/screens/product_detail_screen.dart';
+import '../../features/product/screens/product_list_screen.dart';
+import '../../features/splash/screens/splash_screen.dart';
 import '../dependency_injection/di.dart';
-import '../features/cart/screens/cart_screen.dart';
-import '../features/product/cubit/product_detail/product_detail_cubit.dart';
-import '../features/product/cubit/product_list/product_list_cubit.dart';
-import '../features/product/screens/product_detail_screen.dart';
-import '../features/product/screens/product_list_screen.dart';
-import '../features/splash/screens/splash_screen.dart';
 
 class AppRouter {
   static final GoRouter config = GoRouter(

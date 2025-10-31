@@ -13,15 +13,15 @@ import 'package:core/common/dependency_injection/di.module.dart' as _i596;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
-import '../common/networking/api.dart' as _i489;
-import '../data/datasource/remote/client/product_client.dart' as _i1013;
-import '../data/repositories/product_repository_impl.dart' as _i839;
-import '../domain/repositories/product_repository.dart' as _i747;
-import '../features/product/cubit/product_detail/product_detail_cubit.dart'
+import '../networking/api.dart' as _i489;
+import '../../data/datasource/remote/client/product_client.dart' as _i1013;
+import '../../data/repositories/product_repository_impl.dart' as _i839;
+import '../../domain/repositories/product_repository.dart' as _i747;
+import '../../features/product/cubit/product_detail/product_detail_cubit.dart'
     as _i370;
-import '../features/product/cubit/product_list/product_list_cubit.dart'
+import '../../features/product/cubit/product_list/product_list_cubit.dart'
     as _i1002;
-import '../features/settings/theme/cubit/theme_cubit.dart' as _i570;
+import '../../features/settings/theme/cubit/theme_cubit.dart' as _i570;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt

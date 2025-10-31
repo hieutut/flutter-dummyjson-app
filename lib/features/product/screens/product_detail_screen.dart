@@ -6,9 +6,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../common/constants/metric_constants.dart';
 import '../../../common/localization/localization.gen.dart';
-import '../../../common/ui/app_loading.dart';
+import '../../../common/ui/styles/app_theme.dart';
+import '../../../common/ui/widgets/app_loading.dart';
 import '../../../data/model/product/product.dart';
-import '../../../styles/app_theme.dart';
 import '../cubit/product_detail/product_detail_cubit.dart';
 import '../widgets/product_images_widget.dart';
 

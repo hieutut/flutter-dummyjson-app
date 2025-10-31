@@ -3,11 +3,11 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'dependency_injection/di.dart';
+import 'common/dependency_injection/di.dart';
+import 'common/routes/app_router.dart';
+import 'common/ui/styles/app_theme.dart';
 import 'features/settings/language/app_language.dart';
 import 'features/settings/theme/cubit/theme_cubit.dart';
-import 'routes/app_router.dart';
-import 'styles/app_theme.dart';
 
 class MainApp extends StatelessWidget {
   MainApp({super.key});
