@@ -13,10 +13,13 @@ import 'features/settings/language/app_language.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  // Bloc.observer = CubitBaseObserver();
+
   Config.setEnv(Environment.PROD);
+
   await initDependencies();
+
   AppRouteObserver.logRouteStack = true;
+
   runApp(
     EasyLocalization(
       supportedLocales: AppLanguage.supportedLocales,
