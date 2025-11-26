@@ -9,14 +9,20 @@
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart",
-      "flutterMode": "debug"
+      "flutterMode": "debug",
+      "env": {
+        "PATH": "/Users/vpbank1/.puro/envs/stable/flutter/bin:${env:PATH}"
+      }
     },
     {
       "name": "Release",
       "request": "launch",
       "type": "dart",
       "program": "lib/main.dart",
-      "flutterMode": "release"
+      "flutterMode": "release",
+      "env": {
+        "PATH": "/Users/vpbank1/.puro/envs/stable/flutter/bin:${env:PATH}"
+      }
     }
   ]
 }

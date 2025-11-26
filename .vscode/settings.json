@@ -36,5 +36,7 @@
       "}",
       ""
     ]
-  }
+  },
+  "dart.flutterSdkPath": "/Users/vpbank1/.puro/envs/stable/flutter",
+  "dart.sdkPath": "/Users/vpbank1/.puro/envs/stable/flutter/bin/cache/dart-sdk"
 }
