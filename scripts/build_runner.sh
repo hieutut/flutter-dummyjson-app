@@ -13,7 +13,9 @@ function module_pub_get() {
         if [ ${module} != ${module_dir_path} ]
         then
             echo "[START] Run build_runner for module: $(basename $module)"
-            cd ${module} && dart run build_runner build --delete-conflicting-outputs
+            cd ${module}
+            # dart run build_runner build --delete-conflicting-outputs
+            puro flutter pub run build_runner build --delete-conflicting-outputs
             echo "[DONE] Run build_runner for module: $(basename $module)"
             echo ""
         fi
@@ -24,7 +26,8 @@ function module_pub_get() {
 module_pub_get ${MODULES_DIR}
 
 echo "[START] Run build_runner for: $(basename $BASE_DIR)"
-dart run build_runner build --delete-conflicting-outputs
+# dart run build_runner build --delete-conflicting-outputs
+puro flutter pub run build_runner build --delete-conflicting-outputs
 echo "[DONE] Run build_runner for: $(basename $BASE_DIR)"
 echo ""
 

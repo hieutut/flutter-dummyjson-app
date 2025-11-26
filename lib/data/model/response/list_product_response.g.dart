@@ -17,10 +17,10 @@ ListProductResponse _$ListProductResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ListProductResponseToJson(
-        ListProductResponse instance) =>
-    <String, dynamic>{
-      'products': instance.products.map((e) => e.toJson()).toList(),
-      'total': instance.total,
-      if (instance.skip case final value?) 'skip': value,
-      if (instance.limit case final value?) 'limit': value,
-    };
+  ListProductResponse instance,
+) => <String, dynamic>{
+  'products': instance.products.map((e) => e.toJson()).toList(),
+  'total': instance.total,
+  'skip': ?instance.skip,
+  'limit': ?instance.limit,
+};

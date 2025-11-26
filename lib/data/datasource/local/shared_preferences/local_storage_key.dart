@@ -4,7 +4,7 @@
 //   static const String token = 'token';
 // }
 
-import '../../dependency_injection/di.dart';
+import '../../../../common/dependency_injection/di.dart';
 import 'local_storage_helper.dart';
 
 class LocalStorageKey<T> {
