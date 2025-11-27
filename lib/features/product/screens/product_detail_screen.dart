@@ -93,7 +93,7 @@ class _ProductDetailScreenState extends BaseStatefulWidgetState<ProductDetailScr
                               ),
                               Text.rich(
                                 TextSpan(
-                                  text: '\$${product.discountPriceString}',
+                                  text: '\$${product.finalPriceString}',
                                   style: context.text.callout.copyWith(
                                     color: Colors.redAccent.shade700,
                                     fontWeight: FontWeight.bold,

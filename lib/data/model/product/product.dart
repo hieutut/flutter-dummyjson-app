@@ -66,8 +66,8 @@ class Product extends Equatable {
   );
 
   bool get hasDiscount => discountPercentage > 0;
-  double get discountPrice => price - (price * discountPercentage / 100);
-  String get discountPriceString => discountPrice.toStringAsFixed(2);
+  double get finalPrice => price - (price * discountPercentage / 100);
+  String get finalPriceString => finalPrice.toStringAsFixed(2);
 
   factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
   Map<String, dynamic> toJson() => _$ProductToJson(this);

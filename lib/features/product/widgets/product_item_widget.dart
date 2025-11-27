@@ -53,7 +53,7 @@ class ProductItemWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  '\$${product.discountPriceString}',
+                  '\$${product.finalPriceString}',
                   style: context.text.subhead.medium,
                 ),
                 kBoxSpaceItem,
